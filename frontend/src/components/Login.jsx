@@ -52,9 +52,9 @@ const Login = () => {
             shape='square'
               onSuccess={createOrgetUser}
               onError={() => {
-                console.log('Login Failed');
+                console.log('Login Failed')
               }}
-            />;
+            />
           </div>
         </div>
       </div>

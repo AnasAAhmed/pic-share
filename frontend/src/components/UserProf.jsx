@@ -6,6 +6,7 @@ import { userCreatedPinsQuery, userQuery, userSavedPinsQuery } from '../utils/da
 import { client } from '../client';
 import MasonryLayout from './MasonryLayout';
 import Spinner from './Spinner';
+import { fetchUser } from '../utils/fetchUser';
 
 
 const UserProf = () => {
@@ -29,7 +30,7 @@ const UserProf = () => {
     localStorage.clear();
     navigate('/login');
   }
-  const isUserLoggedin = localStorage.getItem('user') !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : localStorage.clear();
+  const isUserLoggedin = fetchUser();
 
 
   useEffect(() => {
